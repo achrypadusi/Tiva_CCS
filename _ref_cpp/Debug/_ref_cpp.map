@@ -1,0 +1,161 @@
+******************************************************************************
+                  TI ARM Linker PC v20.2.1                     
+******************************************************************************
+>> Linked Mon Dec 28 20:49:02 2020
+
+OUTPUT FILE NAME:   <_ref_cpp.out>
+ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 000002b5
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  00000334  0003fccc  R  X
+  SRAM                  20000000   00008000  000001f8  00007e08  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00000334   00000334    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    000000c8   000000c8    r-x .text
+20000000    20000000    000001f8   00000000    rw-
+  20000000    20000000    000001f8   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
+
+.text      0    0000026c    000000c8     
+                  0000026c    00000048     main.obj (.text)
+                  000002b4    0000002c     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00_noinit_noargs:_c_int00_noinit_noargs)
+                  000002e0    0000000e     driverlib.lib : uart.obj (.text:UARTCharGetNonBlocking)
+                  000002ee    0000000e                   : uart.obj (.text:UARTCharPutNonBlocking)
+                  000002fc    0000000e                   : uart.obj (.text:UARTCharsAvail)
+                  0000030a    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00000316    0000000a     driverlib.lib : uart.obj (.text:UARTIntStatus)
+                  00000320    00000006                   : sysctl.obj (.text:SysCtlDelay)
+                  00000326    00000004                   : uart.obj (.text:UARTIntClear)
+                  0000032a    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  0000032e    00000004                                   : exit.c.obj (.text:abort:abort)
+                  00000332    00000002     MainCPP.obj (.text)
+
+.cinit     0    00000000    00000000     UNINITIALIZED
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.stack     0    20000000    000001f8     UNINITIALIZED
+                  20000000    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  20000004    000001f4     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20000000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    .\
+       tm4c123gh6pm_startup_ccs.obj   12     620       0      
+       main.obj                       72     0         0      
+       MainCPP.obj                    2      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         86     620       0      
+                                                              
+    C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib
+       uart.obj                       56     0         0      
+       sysctl.obj                     6      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         62     0         0      
+                                                              
+    C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       boot_cortex_m.c.obj            44     0         0      
+       exit.c.obj                     4      0         0      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         52     0         0      
+                                                              
+       Stack:                         0      0         504    
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   200    620       504    
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                   
+-------   ----                   
+0000032f  C$$EXIT                
+0000030b  ResetISR               
+00000321  SysCtlDelay            
+000002e1  UARTCharGetNonBlocking 
+000002ef  UARTCharPutNonBlocking 
+000002fd  UARTCharsAvail         
+00000327  UARTIntClear           
+0000026d  UARTIntHandler         
+00000317  UARTIntStatus          
+200001f8  __STACK_END            
+000001f8  __STACK_SIZE           
+20000200  __STACK_TOP            
+ffffffff  __TI_pprof_out_hndl    
+ffffffff  __TI_prof_data_size    
+ffffffff  __TI_prof_data_start   
+00000000  __TI_static_base__     
+ffffffff  __binit__              
+ffffffff  __c_args__             
+UNDEFED   __mpu_init             
+20000000  __stack                
+20000000  __start___llvm_prf_cnts
+20000000  __stop___llvm_prf_cnts 
+000002b5  _c_int00_noinit_noargs 
+0000032b  _system_pre_init       
+0000032f  abort                  
+ffffffff  binit                  
+00000000  g_pfnVectors           
+000002a3  main                   
+00000333  main_cpp               
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                   
+-------   ----                   
+00000000  __TI_static_base__     
+00000000  g_pfnVectors           
+000001f8  __STACK_SIZE           
+0000026d  UARTIntHandler         
+000002a3  main                   
+000002b5  _c_int00_noinit_noargs 
+000002e1  UARTCharGetNonBlocking 
+000002ef  UARTCharPutNonBlocking 
+000002fd  UARTCharsAvail         
+0000030b  ResetISR               
+00000317  UARTIntStatus          
+00000321  SysCtlDelay            
+00000327  UARTIntClear           
+0000032b  _system_pre_init       
+0000032f  C$$EXIT                
+0000032f  abort                  
+00000333  main_cpp               
+20000000  __stack                
+20000000  __start___llvm_prf_cnts
+20000000  __stop___llvm_prf_cnts 
+200001f8  __STACK_END            
+20000200  __STACK_TOP            
+ffffffff  __TI_pprof_out_hndl    
+ffffffff  __TI_prof_data_size    
+ffffffff  __TI_prof_data_start   
+ffffffff  __binit__              
+ffffffff  __c_args__             
+ffffffff  binit                  
+UNDEFED   __mpu_init             
+
+[29 symbols]

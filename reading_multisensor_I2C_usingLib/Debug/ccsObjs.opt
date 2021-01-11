@@ -1,0 +1,1 @@
+"./MainCPP.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./BMP280/BMP280_Drv.obj" "./BMP280/BMP280_Utils.obj" "./BMP280/BMP280_Ware.obj" "./interfaces/TivaC_I2C.obj" "./interfaces/TivaC_SPI.obj" "./interfaces/TivaC_SPI_utils.obj" "C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -llibc.a 
